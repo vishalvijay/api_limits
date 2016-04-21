@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   	devise_for :users, path: "api/v1/users"
 	namespace :api do
 	    namespace :v1 do
-	    	resources :users, :only =>[:index] do
+	    	resources :users do
 	    		collection do
 	    			get :profile
 	    		end

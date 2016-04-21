@@ -1,5 +1,9 @@
 defaults: &defaults
     test: vishal
+    access_blocking_duration: 2
+    access_limit:
+        authenticated: 10
+        unauthenticated: 3
 
 development:
   <<: *defaults

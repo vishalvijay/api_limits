@@ -48,3 +48,6 @@ end
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'settingslogic'
+
+gem 'redis'
+gem 'redis-namespace'
