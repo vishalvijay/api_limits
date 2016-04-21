@@ -1,0 +1,11 @@
+defaults: &defaults
+    test: vishal
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
