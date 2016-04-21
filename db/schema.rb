@@ -47,12 +47,14 @@ ActiveRecord::Schema.define(version: 20160421214326) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "repositories", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",        null: false
     t.string   "url"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "repositories", ["name"], name: "index_repositories_on_name"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
