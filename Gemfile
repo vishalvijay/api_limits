@@ -51,3 +51,5 @@ gem 'settingslogic'
 
 gem 'redis'
 gem 'redis-namespace'
+
+gem 'httparty'

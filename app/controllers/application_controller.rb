@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
     protected
 
     def base_respond result, status = :ok
-        obj = {result: result, api_access_limit_details: api_access_limit_details}
+        obj = {result: result}
+        obj[:api_access_limit_details] = api_access_limit_details if @limit
         render(json: obj, status: status)
     end
 
