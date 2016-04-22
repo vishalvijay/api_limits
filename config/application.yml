@@ -1,6 +1,6 @@
 defaults: &defaults
     test: vishal
-    access_blocking_duration: 2
+    access_blocking_duration: 1
     access_limit:
         authenticated: 50
         unauthenticated: 10
