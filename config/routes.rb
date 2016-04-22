@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 	    			get :profile
 	    		end
 	      	end
+            resources :repositories, only: [:index, :show] do
+                collection do
+                    get :search
+                end
+            end
 	    end
 	end
 	devise_for :admin_users, ActiveAdmin::Devise.config
