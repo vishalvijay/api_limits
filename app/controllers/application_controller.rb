@@ -57,7 +57,7 @@ class ApplicationController < ActionController::Base
         if current_user
             ["user-#{current_user.id}", Settings.access_limit.authenticated]
         else
-            [session.id, Settings.access_limit.unauthenticated]
+            [request.remote_ip, Settings.access_limit.unauthenticated]
         end
     end
 
